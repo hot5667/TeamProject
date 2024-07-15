@@ -4,15 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const template = document.getElementById('template');
     const bottom = document.getElementById('bottom');
 
+    let cloneCount = 0;
+
     form.addEventListener("submit", function (event) {
         event.preventDefault();
-        // console.log('폼이 제출되었습니다.');
 
         const textValue = text.value.trim();
-        // console.log(text.value);
-        // console.log(textValue);
 
-        if (textValue !== "") {
+        if (textValue !== "" && cloneCount < 4) {
             const clone = template.content.cloneNode(true);
 
             const todoElement = clone.querySelector('.content');
@@ -25,9 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
             const deletebtn = cloneContainer.querySelector('.delete');
             deletebtn.addEventListener("click", function () {
                 bottom.removeChild(cloneContainer);
+                cloneCount--;
             });
-            
-            text.vlaue = "";
+
+            cloneCount++;
+
+            text.value = "";
         }
     });
 });
