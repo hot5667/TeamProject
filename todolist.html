@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="todolist.css">
+    <script src="todolist.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="top">
+            <h1 class="title">To Do List</h1>
+            <form id="form">
+                <input id="text" type="text" class="text" placeholder="할 일을 입력하세요" autocomplete="off" />
+                <button type="submit" id="add" class="add">+</button>
+            </form>
+        </div>
+        <div id="bottom" class="bottom"></div>
+        <template id="template">
+            <div class="list">
+                <div class="todo">
+                    <p class="content"><input type="checkbox" />투두리스트만들기</p>
+                    <button class="delete">X</button>
+                </div>
+            </div>
+        </template>
+    </div>
+</body>
+
+</html>

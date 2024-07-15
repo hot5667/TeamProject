@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap");
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.box {
+    background-color: white;
+    width: 300px;
+    height: 340px;
+
+    box-sizing: border-box;
+    padding: 20px 15px;
+
+    position: absolute;
+    top: 97px;
+    right: 50px;
+    
+    border: 2px solid white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.box .top {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.top > h1 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.top > form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.top > form .text {
+    background-color: rgb(235, 235, 235);
+    height: 25px;
+
+    border: none;
+    border-radius: 15px;
+    padding-left: 18px;
+}
+
+.top > form .add {
+    background-color: rgb(200, 200, 200);
+    color: white;
+
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+
+    box-sizing: border-box;
+    border: none;
+    border-radius: 50%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.top > form .add:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.box > .bottom {
+    margin-top: 20px;
+}
+
+.box > .list {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.list .todo {
+    background-color: white;
+    width: 250px;
+    height: 38px;
+
+    box-sizing: border-box;
+    padding: 0px 20px;
+    border-radius: 30px;
+    border: 2px solid rgba(215, 215, 215, 0.5);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+    margin-bottom: 13px /*auto*/;
+}
+
+.list .todo .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 13px;
+}
+
+.list .todo .delete {
+    background-color: rgba(90, 90, 90, 0.472);
+    color: white;
+    font-size: 10px;
+
+    height: 18px;
+    width: 18px;
+
+    border: none;
+    border-radius: 50%;
+
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    cursor: pointer;
+    transition: opacity 0.1s ease;
+  }
+
+ .delete:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
