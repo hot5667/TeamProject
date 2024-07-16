@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (textValue !== "" && cloneCount < 4) {
             const clone = template.content.cloneNode(true);
 
-            const todoElement = clone.querySelector('.content');
+            const todoElement = clone.querySelector('.textV');
             todoElement.innerHTML = `<input type="checkbox" /> ${textValue}`;
 
             const cloneContainer = document.createElement("div");
