@@ -1,0 +1,85 @@
+body {
+    background-color: #fdf7fd;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* 각 카드 사이의 간격을 조정 */
+    margin-top: 40px; /* 상단 여백 추가 */
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    position: relative;
+}
+
+.card.left {
+    justify-content: flex-start;
+    text-align: right;
+    margin-left: auto; /* 화면의 오른쪽으로 카드를 몰아줌 */
+    margin-right: 0; /* 오른쪽 여백 제거 */
+}
+
+.card.right {
+    justify-content: flex-end;
+    text-align: left;
+    margin-left: auto; /* 화면의 왼쪽으로 카드를 몰아줌 */
+}
+
+.profile-img {
+    width: 100px; /* 프로필 이미지 크기 조정 */
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin-right: 20px; /* 프로필 이미지와 텍스트 사이 간격 조정 */
+}
+
+.card.left .profile-img {
+    margin-left: 0; /* 왼쪽 카드의 프로필 이미지 여백 제거 */
+    margin-right: 20px; /* 오른쪽에 프로필 이미지와 텍스트 사이 간격 조정 */
+}
+
+.card.right .profile-img {
+    margin-left: 20px; /* 왼쪽에 프로필 이미지와 텍스트 사이 간격 조정 */
+    margin-right: 0; /* 오른쪽 카드의 프로필 이미지 여백 제거 */
+}
+
+.p {
+    margin: 0;
+    font-size: 13px; /* 글자 크기를 11포인트로 설정 */
+    white-space: nowrap; /* 텍스트가 한 줄로만 출력되도록 설정 */
+    overflow: hidden; /* 넘치는 텍스트는 숨김 처리 */
+    text-overflow: ellipsis; /* 넘치는 텍스트에 대해 말줄임표(...)로 표시 */
+    flex-grow: 1;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+}
+
+.card.left .icons {
+    right: -60px; /* 원의 오른쪽에 아이콘을 배치 */
+}
+
+.card.right .icons {
+    left: -60px; /* 원의 왼쪽에 아이콘을 배치 */
+}
+
+.icons img {
+    width: 20px; /* 아이콘 크기 조정 */
+    height: 20px;
+}  
