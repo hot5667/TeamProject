@@ -7,10 +7,6 @@
   font-style: normal;
 }
 
-body {
-    height: 1800vh;
-}
-
 .todolist {
     position: fixed;
     top: 0px;
