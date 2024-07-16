@@ -7,6 +7,32 @@
   font-style: normal;
 }
 
+.listbtn {
+    background-color: rgba(70, 70, 70, 0.434);
+    width: 38px;
+    height: 38px;
+    color: white;
+
+    position: absolute;
+    top:97px;
+    right: 50px;
+
+    box-sizing: border-box;
+    border: none;
+    border-radius: 50%;
+  
+    cursor: pointer;
+}
+
+.listbtn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
 .box {
     background-color: white;
     width: 300px;
@@ -16,7 +42,7 @@
     padding: 20px 15px;
 
     position: absolute;
-    top: 97px;
+    top: 147px;
     right: 50px;
     
     border: 2px solid white;

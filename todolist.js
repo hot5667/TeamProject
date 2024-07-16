@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    const listbtn = document.getElementById('listbtn');
+    const box = document.getElementById('box');
+
+    listbtn.addEventListener('click', function() {
+        box.classList.toggle('hide');
+    });
+
     const form = document.getElementById('form');
     const text = document.getElementById('text');
     const template = document.getElementById('template');
