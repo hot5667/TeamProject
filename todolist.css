@@ -36,7 +36,7 @@
 .box {
     background-color: white;
     width: 300px;
-    height: 340px;
+    height:fit-content;
 
     box-sizing: border-box;
     padding: 20px 15px;
@@ -106,6 +106,10 @@
 
 .box > .bottom {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .box > .list {
