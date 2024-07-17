@@ -17,7 +17,8 @@ const success = async (position) => {
 }
 
 const fail = () => {
-console.log("위치정보 액세스 불가!")
+    loader.style.display = 'none'
+    console.log("위치정보 액세스 불가!")
 }
 
 const get_Date= () => {

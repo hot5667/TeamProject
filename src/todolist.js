@@ -1,5 +1,5 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyD0o93MUJorSwMSWkVxu_bgzv_s3OAbyY0",
@@ -11,8 +11,8 @@ const firebaseConfig = {
     measurementId: "G-QXPFWCHZ70"
 };
   
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 document.addEventListener("DOMContentLoaded", function () {
     const listbtn = document.getElementById('listbtn');
