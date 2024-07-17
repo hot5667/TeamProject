@@ -267,6 +267,9 @@ input[type=date] {
 input[type=date]:focus {
     outline: none;
 }
+input[type=date]::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+}
 input[type=date]::-webkit-datetime-edit-text {
     -webkit-appearance: none;
     display: none;
