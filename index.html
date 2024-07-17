@@ -11,7 +11,7 @@
 
     <title>TeamShowcase</title>
 
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" href="/css/topBar.css">
     <link rel="stylesheet" href="/css/todolist.css">
     <link rel="stylesheet" href="/css/Sidebar.css">
@@ -218,16 +218,16 @@
 
     <script type="module">
 
-        import { initializeToggleDarkMode } from '/src/main.js';
+        import { initializeToggleDarkMode } from '../src/main.js';
         initializeToggleDarkMode();
 
-        import { initializeSideBar } from '/src/Sidebar.js'
+        import { initializeSideBar } from '../src/Sidebar.js'
         initializeSideBar();
 
-        import { initializeSTopBar } from '/src/topBar.js';
+        import { initializeSTopBar } from '../src/topBar.js';
         initializeSTopBar();
 
-        import { initializeToDoList } from '/src/todolist.js'
+        import { initializeToDoList } from '../src/todolist.js'
         initializeToDoList();
 
     </script>
