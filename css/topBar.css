@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+* {
+    font-family: "Do Hyeon", sans-serif;
+    font-style: normal;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgb(72, 209, 204);
+    width: 100%;
+    height: 100px;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+    z-index: 1002;
+}
+
+.nav {
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 50px 0 20px;
+    height: 100%;
+}
+
+.left_Item {
+    align-items: center;
+    display: flex;
+}
+
+.left_Item img {
+    width: 180px;
+    height: auto;
+}
+
+.right_Item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 120px;
+    height: 80%;
+    gap: 5px;
+}
+
+.weather_Left_Item {
+    display: none;
+}
+
+.weather_Left_Item img {
+    width: 80px;
+    height: auto;
+}
+
+.weather_Right_Item {
+    flex: 1;
+    gap: 5px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loader {
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid gray;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

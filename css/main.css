@@ -1,0 +1,264 @@
+:root {
+    --bg-color-light:#9bbbd4; 
+    --text-color-light: black;
+    --bg-color-dark: #2c2c2c;
+    --text-color-dark: #fff;
+}
+
+body {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    font-family: "Do Hyeon", sans-serif;
+    font-style: normal;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+.topbar {
+    background-color: green;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-container {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 1000; 
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    vertical-align: middle;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+p { 
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 120px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.card.left {
+    justify-content: flex-start;
+    text-align: right;
+}
+
+.card.right {
+    justify-content: flex-end;
+    text-align: left;
+}
+
+.profile-contaniner {
+    position: relative;
+}
+
+.profile-img {
+    width: 224px;
+    height: 224px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card.left .profile-img {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.card.right .profile-img {
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.Team-text {
+    font-size: 25px;
+    padding: 15px;
+}
+
+.p {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.icons-left{
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+}
+
+.icons-left a {
+    display: inline-block; 
+    position: relative;
+}
+
+.icons-left img {
+    width: 20px;
+    height: 20px;
+}
+
+.icons-right {
+    position: absolute;
+    display: flex;
+    left: 0;
+    align-items: center;
+    gap: 10px;
+}
+
+.icons-right img {
+    width: 20px;
+    height: 20px;
+}
+
+.profile-container {
+    position: relative;
+    text-align: center; 
+}
+
+.profile-name-left {
+    position: absolute;
+    bottom: -10px; 
+    right: 101px; 
+    border: 1px solid black;
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 5px 10px; 
+    white-space: nowrap; 
+    display: inline-block;
+    transition: transfrom 0.2s ease-in-out;;
+}
+
+.profile-name-left:hover {
+    background-color: rgb(255, 255, 0);
+
+}
+
+.profile-name-right {
+    position: absolute;
+    bottom: -10px; 
+    left: 101px; 
+    border: 1px solid black;
+    background-color: #fff;
+    color:black;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 5px 10px; 
+    white-space: nowrap; 
+    display: inline-block;
+    transition: transfrom 0.2s ease-in-out;
+}
+
+.profile-name-right:hover {
+    background-color: rgb(255, 255, 0);
+}
+
+.bubble {
+    position: relative;
+    display: inline-block;
+    background-color: yellow; 
+    color: #000; 
+    padding: 10px 20px; 
+    border-radius: 20px; 
+    line-height: 1.5; 
+    max-width: 70%; 
+}
+
+.bubble::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -10px; 
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent yellow transparent transparent; /* 트라이앵글 */
+}
