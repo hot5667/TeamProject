@@ -1,14 +1,16 @@
 :root {
     --bg-color-light:rgb(72, 209, 204); 
     --text-color-light: #fff;
+    --text-color-stroke-light: black;
     --bg-color-dark: #2c2c2c;
-    --text-color-dark: #fff;
+    --text-color-dark: black;
+    --text-color-stroke-dark: #fff;
 }
 
 body {
     background-color: var(--bg-color-light);
-    color: var(--text-color-light);
     -webkit-text-stroke: 0.2px black;
+    color: var(--text-color-light);
     font-family: "Do Hyeon", sans-serif;
     font-style: normal;
     height: 100vh;
@@ -19,6 +21,7 @@ body {
 body.dark-mode {
     background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
+    -webkit-text-stroke: 0.2px var(--text-color-stroke-dark);
 }
 
 .topbar {
@@ -99,7 +102,7 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-p {
+p { 
     margin: 0;
     display: inline-block;
     font-size: 15px;
@@ -136,7 +139,7 @@ p {
     width: 224px;
     height: 224px;
     border-radius: 50%;
-    border: 2px solid #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card.left .profile-img {
@@ -189,3 +192,39 @@ p {
     height: 20px;
 }
 
+.profile-container {
+    position: relative;
+    text-align: center; 
+}
+
+.profile-name-left {
+    position: absolute;
+    bottom: -20px; 
+    right: 85%; 
+    transform: translateX(-50%);
+    border: 1px solid black;
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 5px 10px; 
+    white-space: nowrap; 
+    display: inline-block;
+}
+
+.profile-name-right {
+    position: absolute;
+    bottom: -20px; 
+    left: 90%; 
+    transform: translateX(-50%);
+    border: 1px solid black;
+    background-color: #fff;
+    color:black;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 5px 10px; 
+    white-space: nowrap; 
+    display: inline-block;
+}
