@@ -161,13 +161,31 @@ p {
     flex-grow: 1;
 }
 
-.icons {
+.icons-left{
+    position: absolute;
+    bottom: 10px; 
+    left: 25%;
+    transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    margin: 0 20px;
 }
 
-.icons img {
+.icons-left img {
     width: 20px;
     height: 20px;
 }
+
+.icons-right {
+    position: absolute;
+    bottom: 10px; 
+    left: 75%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.icons-right img {
+    width: 20px;
+    height: 20px;
+}
+
