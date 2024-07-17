@@ -1,15 +1,12 @@
 :root {
-    --bg-color-light:rgb(72, 209, 204); 
-    --text-color-light: #fff;
-    --text-color-stroke-light: black;
+    --bg-color-light:#9bbbd4; 
+    --text-color-light: black;
     --bg-color-dark: #2c2c2c;
-    --text-color-dark: black;
-    --text-color-stroke-dark: #fff;
+    --text-color-dark: #fff;
 }
 
 body {
     background-color: var(--bg-color-light);
-    -webkit-text-stroke: 0.2px black;
     color: var(--text-color-light);
     font-family: "Do Hyeon", sans-serif;
     font-style: normal;
@@ -21,7 +18,6 @@ body {
 body.dark-mode {
     background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
-    -webkit-text-stroke: 0.2px var(--text-color-stroke-dark);
 }
 
 .topbar {
@@ -103,10 +99,10 @@ input:checked + .slider:before {
 }
 
 p { 
-    margin: 0;
     display: inline-block;
     font-size: 15px;
     font-weight: bold;
+    background-color: yellow;
 }
 
 .container {
@@ -114,7 +110,7 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    margin-top: 40px;
+    margin-top: 120px;
 }
 
 .card {
@@ -154,6 +150,7 @@ p {
 
 .Team-text {
     font-size: 35px;
+    padding: 15px;
 }
 
 .p {
@@ -211,6 +208,12 @@ p {
     padding: 5px 10px; 
     white-space: nowrap; 
     display: inline-block;
+    transition: transfrom 0.2s ease-in-out;;
+}
+
+.profile-name-left:hover {
+    background-color: rgb(255, 255, 0);
+
 }
 
 .profile-name-right {
@@ -227,4 +230,9 @@ p {
     padding: 5px 10px; 
     white-space: nowrap; 
     display: inline-block;
+    transition: transfrom 0.2s ease-in-out;
+}
+
+.profile-name-right:hover {
+    background-color: rgb(255, 255, 0);
 }

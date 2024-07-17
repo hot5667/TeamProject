@@ -11,12 +11,30 @@
     <title>TeamShowcase</title>
 
     <link rel="stylesheet" href="/css/test.css">
+    <link rel="stylesheet" href="/css/topBar.css">
 </head>
 
 <body>
-    <div class="topbar">
-        123
+
+    <div class="header">
+        <nav class="nav">
+            <div class="left_Item">
+                <img id="logo" src="/img/logo(pink).png">
+            </div>
+
+            <div class="right_Item">
+                <div class="weather_Left_Item", id="weather_Left_Item">
+                    <img id="weather_Icon">
+                </div>
+                <div class="weather_Right_Item", id="weather_Right_Item">
+                    <text id="city"></text>
+                    <text id="temp"></text>
+                </div>
+                <div class="loader" id="loader"></div>
+            </div>
+        </nav>
     </div>
+
     <div class="container">
         <div class="card left">
             <div class  = "profile-contaniner">
@@ -103,7 +121,10 @@
         </label>
         <p id="toggle-status"></p>
     </div>
+
+    <script src="/src/topBar.js"></script>
     <script src="/src/main.js"></script>
+
 </body>
 
 </html>
