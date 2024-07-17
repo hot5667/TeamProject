@@ -1,10 +1,11 @@
 {
+  "homepage": "https://hot5667.github.io/TeamProject/",
+  "scripts": {
+    "deploy": "gh-pages -d public"
+  }, 
+  
   "dependencies": {
     "gh-pages": "^6.1.1"
-  },
-  "scripts": {
-    "homepage": "https://hot5667.github.io/TeamProject/",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
+  }
+
 }
