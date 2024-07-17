@@ -28,16 +28,13 @@
     border-radius: 50%;
   
     cursor: pointer;
-}
+    transition: background-color 0.3s ease;
+  }
 
-.listbtn:hover {
-    transform: scale(1.05);
+ .listbtn:hover {
+    background-color: rgb(17, 150, 146);
     cursor: pointer;
-}
-
-.hide {
-    display: none;
-}
+  }
 
 .box {
     background-color: white;
@@ -70,10 +67,19 @@
 
 .top > form {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 10px;
+}
+
+.top > form > div {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    
     gap: 12px;
 }
 
@@ -123,7 +129,7 @@
 .box > .list {
     display: flex;
     flex-direction: column;
-    justify-items: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -142,7 +148,7 @@
     justify-content: space-between;
     align-items: center;
 
-    gap: 20px;
+    gap: 5px;
     margin-bottom: 13px /*auto*/;
 }
 
@@ -175,7 +181,7 @@
 }
 
 .custom-checkbox input[type="checkbox"]:checked + .checkmark {
-    background-color: rgb(255, 215, 57);
+    background-color: rgb(27, 209, 204);
 }
 
 .custom-checkbox .checkmark:after {
@@ -198,10 +204,18 @@
     transform: rotate(45deg);
 }
 
-.content .textV {
-    margin:0px 15px;
+.content {
+    display: flex;
+    align-items: center;
+}
 
-    font-size: 17px;
+.content .info {
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 10px;
 }
 
 .list .todo .delete {
@@ -228,3 +242,12 @@
     opacity: 0.8;
     cursor: pointer;
   }
+  
+.hide {
+    display: none;
+}
+
+  .strikethrough {
+    text-decoration: line-through solid black;
+    text-decoration-thickness: 2px;
+}

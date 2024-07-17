@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     const listbtn = document.getElementById('listbtn');
     const box = document.getElementById('box');
 
@@ -8,9 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const form = document.getElementById('form');
+    const date = document.getElementById('date');
     const text = document.getElementById('text');
-    const template = document.getElementById('template');
     const bottom = document.getElementById('bottom');
+    const template = document.getElementById('template');
 
     let cloneCount = 0;
 
@@ -18,26 +18,33 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
         const textValue = text.value.trim();
+        const dateValue = date.value;
 
-        if (textValue !== "" && cloneCount < 4) {
+        if (dateValue !== "" && textValue !== "" && cloneCount < 4) {
             const clone = template.content.cloneNode(true);
+            const textDateElement = clone.querySelector('.text-date');
 
-            const todoElement = clone.querySelector('.textV');
-            todoElement.innerHTML = `<input type="checkbox" /> ${textValue}`;
+            textDateElement.textContent = `${textValue} ${dateValue}`;
 
-            const cloneContainer = document.createElement("div");
-            cloneContainer.appendChild(clone);
-            bottom.appendChild(cloneContainer);
+            const checkbox = clone.querySelector('input[type="checkbox"]');
+            checkbox.addEventListener('change', function() {
+                if (checkbox.checked) {
+                    textDateElement.classList.add('strikethrough');
+                } else {
+                    textDateElement.classList.remove('strikethrough');
+                }
+            });
 
-            const deletebtn = cloneContainer.querySelector('.delete');
+            const deletebtn = clone.querySelector('.delete');
             deletebtn.addEventListener("click", function () {
-                bottom.removeChild(cloneContainer);
+                deletebtn.parentNode.parentNode.remove();
                 cloneCount--;
             });
 
+            bottom.appendChild(clone);
             cloneCount++;
-
             text.value = "";
+            date.value = "";
         }
     });
 });
