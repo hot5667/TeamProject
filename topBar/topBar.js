@@ -2,8 +2,15 @@ const success = async (position) => {
         const lat = position.coords.latitude
         const lon = position.coords.longitude
 
+        const left_Content = document.getElementById("weather_Left_Item")
+        const right_Content = document.getElementById("weather_Right_Item")
+        const loader = document.getElementById("loader")
+
         try {
             await Promise.all[get_WeatherInfo(lat, lon), get_CityInfo(lat, lon)]
+            loader.style.display = 'none'
+            left_Content.style.display = 'flex'
+            right_Content.style.display = 'flex'
         } catch(error) {
             throw console.error(error)
         }
