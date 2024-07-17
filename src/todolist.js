@@ -1,5 +1,8 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyD0o93MUJorSwMSWkVxu_bgzv_s3OAbyY0",
@@ -8,12 +11,14 @@ const firebaseConfig = {
     storageBucket: "teamshowcase-531d0.appspot.com",
     messagingSenderId: "877618284112",
     appId: "1:877618284112:web:3881426e83a786e4a8f355",
-    measurementId: "G-QXPFWCHZ70"
+    measurementId: "G-QXPFWCHZ70"   
 };
-  
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
 
+
+// Firebase 인스턴스 초기화
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+  
 document.addEventListener("DOMContentLoaded", function () {
     const listbtn = document.getElementById('listbtn');
     const box = document.getElementById('box');
