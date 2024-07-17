@@ -77,16 +77,15 @@
 .top > form > div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    
-    gap: 12px;
+    gap: 3px;
 }
 
 .top > form .text {
     background-color: rgb(235, 235, 235);
     height: 28px;
-    width: 175px;
+    width: 160px;
     font-size: 16px;
 
     border: none;
@@ -109,6 +108,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 10px;
 
     cursor: pointer;
 }
@@ -135,7 +135,7 @@
 
 .list .todo {
     background-color: white;
-    width: 250px;
+    width: 270px;
     height: 38px;
 
     box-sizing: border-box;
@@ -149,7 +149,7 @@
     align-items: center;
 
     gap: 5px;
-    margin-bottom: 13px /*auto*/;
+    margin-bottom: 13px;
 }
 
 .list .todo .content {
@@ -210,7 +210,7 @@
 }
 
 .content .info {
-    margin-left: 5px;
+    margin-left: 7px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -247,7 +247,39 @@
     display: none;
 }
 
-  .strikethrough {
-    text-decoration: line-through solid black;
-    text-decoration-thickness: 2px;
+.strikethrough {
+    text-decoration: line-through;
+    opacity: 0.5; /* 줄 긋기 시 투명도 조정 */
+}
+
+
+
+/* 달력 */
+input[type=date] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    font-size: 100%;
+    border: none;
+
+    padding-right: 1px;
+}
+input[type=date]:focus {
+    outline: none;
+}
+input[type=date]::-webkit-datetime-edit-text {
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-datetime-edit-month-field{
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-datetime-edit-day-field {
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-datetime-edit-year-field {
+    -webkit-appearance: none;
+    display: none;
 }

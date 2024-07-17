@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const clone = template.content.cloneNode(true);
             const textDateElement = clone.querySelector('.text-date');
 
-            textDateElement.textContent = `${textValue} ${dateValue}`;
-
+            textDateElement.textContent = `${textValue} (${dateValue})`;
+            
             const checkbox = clone.querySelector('input[type="checkbox"]');
             checkbox.addEventListener('change', function() {
                 if (checkbox.checked) {
