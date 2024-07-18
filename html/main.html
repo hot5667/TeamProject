@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3a115195d8.js" crossorigin="anonymous"></script>
     <title>TeamShowcase</title>
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="../css/Sidebar.css">
     <link rel="stylesheet" href="../css/TeamDetailPage.css">
     <link rel="stylesheet" href="../css/top_box.css">
+    <link rel="stylesheet" href="../css/media.css">
 </head>
 
 <body>
@@ -71,6 +73,38 @@
         <div id="JanSungHyun-section" class="section">장성현 페에지</div>
     </div>
 
+
+    <!-- 미디어 -->
+    <div class="music-container" id="music-container">
+        <div class="music-subcontainer" id="music-subcontainer">
+            <div class="music-info">
+                <h2 id="title" class="title"></h2>
+                <div class="progress-container" id="progress-container">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+            <audio
+                src="https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/music/summer.mp3?raw=true"
+                id="audio"></audio>
+            <div class="img-container">
+                <img src="https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/images/summer.jpg?raw=true"
+                    alt="music-cover" id="cover" />
+            </div>
+            <div class="navigation">
+                <button id="prev" class="action-btn">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button id="play" class="action-btn action-btn-big">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="next" class="action-btn">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
     <!-- main -->
     <div class="container">
         <div class='Subcontainer' id='Subcontainer'>
@@ -99,8 +133,8 @@
                 <div class="bubble-right">
                     <p class="Team-text">
                         안녕하세요, 장성현 입니다.<br>
-                        저는 즐겁게 개발하고 싶고,<br>
-                        목표는 성장을 게을리하지 않는 개발자가 되는 것입니다.
+                        저는 즐겁게 개발하고 싶고,☺️<br>
+                        목표는 성장을 게을리하지 않는 개발자가 되는 것입니다.🔥
                     </p>
                 </div>
                 <div class="profile-contaniner">
@@ -131,14 +165,19 @@
                 </div>
                 <div class="bubble-left">
                     <p class="Team-text">
-                        갈 길이 한참 먼 코린이에요!
+                        동탄에 살지만 동탄 IT단지에서는 취업하고 싶지않은 코딩실력 lv.1 조희진입니다.<br>
+                        판교나 서울에 출근해야 더 있어보인다고 생각해서요,, <br>
+                        또, 동탄에서 금요일에 퇴근하면 놀만하게 없거든요 ㅎㅎ <br>
+                        원래 퍼블리셔 준비했었지만 프론트 개발자를 우연히 알게돼서 진로를 바꾸게 됐어요. <br>
+                        열심히 업그레이드 중입니다 ㅎㅎ 🆙 <br>
+                        우리 모두 프론트 개발자가 되는 날까지 화이팅~! 🔥 <br>
                     </p>
                 </div>
             </div>
             <div class="card right">
                 <div class="bubble-right">
                     <p class="Team-text">
-                        안녕하세요 예비 FE개발자 한수빈입니다. 잠시 지나가겠습니다~ 🍃
+                        안녕하세요 예비 FE개발자 한수빈입니다.🖥️ 잠시 지나가겠습니다~ 🍃
                     </p>
                 </div>
                 <div class="profile-contaniner">
@@ -169,12 +208,11 @@
                 </div>
                 <div class="bubble-left">
                     <p class="Team-text">
-                        안녕하세요 24살 같지 않은 김도현입니다. <br>
+                        안녕하세요 24살 같지 않은 김도현입니다.🌱 <br>
                         인생은 무한도전!🔥
                     </p>
                 </div>
             </div>
-
             <!-- 슬라이드 -->
             <div class="slideshow-container">
                 <div class="slideshow-subcontainer">
@@ -269,7 +307,8 @@
                     <i class="fa-solid fa-list"></i>
                 </button>
             </div>
-            <div id="box" class="box hide">  <!--  유레카 box, hide 동시할당 -->
+            <div id="box" class="box hide">
+                <!--  유레카 box, hide 동시할당 -->
                 <div class="top">
                     <h1 class="title">To Do List</h1>
                     <form id="form">
@@ -288,11 +327,11 @@
                         <div class="todo">
                             <div class="content">
                                 <label class="custom-checkbox">
-                                 <input type="checkbox">
-                                 <span class="checkmark"></span>
-                                 <div class="info">
-                                    <p class="text-date"></p>
-                                 </div>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <div class="info">
+                                        <p class="text-date"></p>
+                                    </div>
                                 </label>
                             </div>
                             <button class="delete">
@@ -310,6 +349,7 @@
         <script src="../src/topbox.js"></script>
         <script src="../src/carousel.js"></script>
         <script src="../src/test.js"></script>
+        <script src="../src/music.js"></script>
         <script src="../src/todolist.js"></script>
 
 </body>

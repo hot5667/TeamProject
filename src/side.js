@@ -1,12 +1,12 @@
 const sidebarItems = document.querySelectorAll('.sidebar-item');
 
 sidebarItems.forEach(item => {
-  item.addEventListener('click', function() {
-    sidebarItems.forEach(item => {
-      item.classList.remove('clicked');
+    item.addEventListener('click', function () {
+        sidebarItems.forEach(item => {
+            item.classList.remove('clicked');
+        });
+        this.classList.add('clicked');
     });
-    this.classList.add('clicked');
-  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -39,35 +39,43 @@ document.addEventListener("DOMContentLoaded", function () {
             introText: '안녕하세요, 장성현입니다.'
         }
     };
-  
+
     sidebarItems.forEach(item => {
-        item.addEventListener('click', function(event) {
+        item.addEventListener('click', function (event) {
             event.preventDefault();
             sidebarItems.forEach(item => {
                 item.classList.remove('clicked');
             });
             this.classList.add('clicked');
-            
+
             const targetId = this.getAttribute('href').substring(1) + '-section';
             subContainer.innerHTML = '';
-  
+
             renderTeamInfo(subContainer, sectionsData[targetId], targetId);
         });
     });
-  
+
     function renderTeamInfo(container, data, targetId) {
         const teamDiv = document.createElement('div');
         teamDiv.classList.add('Team1');
         teamDiv.id = data.name;
-  
+
         const img = document.createElement('img');
         img.src = data.imgSrc;
         img.alt = `${data.name} 프로필 사진`;
-  
+
         const text = document.createElement('p');
         text.classList.add('team-text');
-        
-        if (targetId === 'KimByungYeop-section') {
+        if (targetId === "KimDohyun-section") {
+            text.innerHTML = `
+            <div class = "KimDohyun-text">
+                MBTI: ENTJ<br> 
+                취미: 운동, 코딩 영화: (역사적 배경을 담은) 국제시장, 남산의 부장들, 서울의 봄, 국가부도의 날, 1987<br> 
+                노래: (팝송) One Call Away(Charlie Puth), Off My  Face(Justin Bieber), Thinking out Loud(Ed Sheeran) Purpose(Etham)<br>
+                게임: (주로 여자친구랑) 오버워치, 크레이지 아케이드, 카트라이더'
+            </div>
+            `;
+        } else if (targetId === 'KimByungYeop-section') {
             text.innerHTML = `
             <div class = "KimByungYeop-text">
                 MBTI: ENTJ<br> 
@@ -76,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 게임: (주로 여자친구랑) 오버워치, 크레이지 아케이드, 카트라이더'
             </div>
             `;
-        } else if (targetId === "ChoHeeJin-section"){
+        } else if (targetId === "ChoHeeJin-section") {
             text.innerHTML = `
             <div class = "ChoHeeJin-text">
                 MBTI: ENTJ<br> 
@@ -85,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 게임: (주로 여자친구랑) 오버워치, 크레이지 아케이드, 카트라이더'
             </div>
             `;
-        } else if(targetId === "HanSuBin-section") {
+        } else if (targetId === "HanSuBin-section") {
             text.innerHTML = `
             <div class = "HanSuBin-text">
                 MBTI: ENTJ<br> 
@@ -104,10 +112,9 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             `;
         }
-  
+
         teamDiv.appendChild(img);
         teamDiv.appendChild(text);
         container.appendChild(teamDiv);
     }
-  });
-  
+});
