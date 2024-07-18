@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3a115195d8.js" crossorigin="anonymous"></script>
+    <title>TeamShowcase</title>
+    <link rel="icon" href="../img/logo(pink).png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/topBar.css">
+    <link rel="stylesheet" href="../css/todolist1.css">
+    <link rel="stylesheet" href="../css/Sidebar.css">
+    <link rel="stylesheet" href="../css/TeamDetailPage.css">
+    <link rel="stylesheet" href="../css/top_box.css">
+    <link rel="stylesheet" href="../css/media.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <nav class="nav">
+            <div class="left_Item">
+                <img id="logo" src="../img/logo(pink).png">
+            </div>
+
+            <div class="right_Item">
+                <div class="weather_Left_Item" , id="weather_Left_Item">
+                    <img id="weather_Icon">
+                </div>
+                <div class="weather_Right_Item" , id="weather_Right_Item">
+                    <text id="city"></text>
+                    <text id="temp"></text>
+                </div>
+                <div class="loader" id="loader"></div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+        <a href="#KimDohyun" class="sidebar-item">
+            <i class="fa-solid fa-user"></i>
+            <p><span>김도현</span></p>
+        </a>
+        <a href="#KimByungYeop" class="sidebar-item">
+            <i class="fa-solid fa-user"></i>
+            <p><span>김병엽</span></p>
+        </a>
+        <a href="#ChoHeeJin" class="sidebar-item">
+            <i class="fa-solid fa-user"></i>
+            <p><span>조희진</span></p>
+        </a>
+        <a href="#HanSuBin" class="sidebar-item">
+            <i class="fa-solid fa-user"></i>
+            <p><span>한수빈</span></p>
+        </a>
+        <a href="#JanSungHyun" class="sidebar-item">
+            <i class="fa-solid fa-user"></i>
+            <p><span>장성현</span></p>
+        </a>
+    </div>
+
+    <div class="content">
+        <div id="KimDohyun-section" class="section">김도현 페이지</div>
+        <div id="KimByungYeop-section" class="section">김병엽 페이지</div>
+        <div id="ChoHeeJin-section" class="section">조회진 페이지</div>
+        <div id="HanSuBin-section" class="section">한수빈 페이지</div>
+        <div id="JanSungHyun-section" class="section">장성현 페에지</div>
+    </div>
+
+
+    <!-- 미디어 -->
+    <div class="music-container" id="music-container">
+        <div class="music-subcontainer" id="music-subcontainer">
+            <div class="music-info">
+                <h2 id="title" class="title"></h2>
+                <div class="progress-container" id="progress-container">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+            <audio
+                src="https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/music/summer.mp3?raw=true"
+                id="audio"></audio>
+            <div class="img-container">
+                <img src="https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/images/summer.jpg?raw=true"
+                    alt="music-cover" id="cover" />
+            </div>
+            <div class="navigation">
+                <button id="prev" class="action-btn">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button id="play" class="action-btn action-btn-big">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="next" class="action-btn">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- main -->
+    <div class="container">
+        <div class='Subcontainer' id='Subcontainer'>
+            <div class="card left">
+                <div class="profile-contaniner">
+                    <img src="../profile/김병엽님 사진.jpeg" alt="이미지" class="profile-img">
+                    <div class="profile-name-left">김병엽</div>
+                    <div class="icons-left">
+                        <a href="https://github.com/Byoung-yup" target="_blank" alt="김병엽git">
+                            <img src="../img/logo_github_icon.png" alt="GitHub">
+                        </a>
+                        <a href="https://velog.io/@quxx/posts" target="_blank" alt="김병엽블로그">
+                            <img src="../img/Link.png" alt="링크">
+                        </a>
+                    </div>
+                </div>
+                <div class="bubble-left">
+                    <p class="Team-text">
+                        반갑습니다. 28살 수원에 거주하고 있는 김병엽이라고 합니다.<br>
+                        짧다면 짧고 길다면 긴 이 시간 동안 좋은 인연으로 만나 뵐 수 있길 바래요!<br>
+                        화이팅, 오늘도 빡코딩입니다!🖥️🔥
+                    </p>
+                </div>
+            </div>
+            <div class="card right">
+                <div class="bubble-right">
+                    <p class="Team-text">
+                        안녕하세요, 장성현 입니다.<br>
+                        저는 즐겁게 개발하고 싶고,☺️<br>
+                        목표는 성장을 게을리하지 않는 개발자가 되는 것입니다.🔥
+                    </p>
+                </div>
+                <div class="profile-contaniner">
+                    <div class="icons-right">
+                        <a href="https://github.com/jjjangsh" target="_blank" alt="정성현git">
+                            <img src="../img/logo_github_icon.png" alt="GitHub">
+                        </a>
+                        <a href="https://jjangsh.tistory.com/" target="_blank" alt="정성현블로그">
+                            <img src="../img/Link.png" alt="링크">
+                        </a>
+                    </div>
+                    <img src="../profile/정성현님 사진.jpeg" alt="이미지" class="profile-img">
+                    <div class="profile-name-right">장성현</div>
+                </div>
+            </div>
+            <div class="card left">
+                <div class="profile-contaniner">
+                    <img src="../profile/조희진님 사진.jpeg" alt="이미지" class="profile-img">
+                    <div class="profile-name-left">조희진</div>
+                    <div class="icons-left">
+                        <a href="https://github.com/heejiini" target="_blank" alt="조희진git">
+                            <img src="../img/logo_github_icon.png" alt="GitHub">
+                        </a>
+                        <a href="https://whgmlwls0219.tistory.com/" target="_blank" alt="조희진블로그">
+                            <img src="../img/Link.png" alt="링크">
+                        </a>
+                    </div>
+                </div>
+                <div class="bubble-left">
+                    <p class="Team-text">
+                        동탄에 살지만 동탄 IT단지에서는 취업하고 싶지않은 코딩실력 lv.1 조희진입니다.<br>
+                        판교나 서울에 출근해야 더 있어보인다고 생각해서요,, <br>
+                        또, 동탄에서 금요일에 퇴근하면 놀만하게 없거든요 ㅎㅎ <br>
+                        원래 퍼블리셔 준비했었지만 프론트 개발자를 우연히 알게돼서 진로를 바꾸게 됐어요. <br>
+                        열심히 업그레이드 중입니다 ㅎㅎ 🆙 <br>
+                        우리 모두 프론트 개발자가 되는 날까지 화이팅~! 🔥 <br>
+                    </p>
+                </div>
+            </div>
+            <div class="card right">
+                <div class="bubble-right">
+                    <p class="Team-text">
+                        안녕하세요 예비 FE개발자 한수빈입니다.🖥️ 잠시 지나가겠습니다~ 🍃
+                    </p>
+                </div>
+                <div class="profile-contaniner">
+                    <div class="icons-right">
+                        <a href="https://github.com/hansub1n" target="_blank" alt="한수빈git">
+                            <img src="../img/logo_github_icon.png" alt="GitHub">
+                        </a>
+                        <a href="https://onetwothreechachacha.tistory.com/?page=1" target="_blank" alt="한수빈블로그">
+                            <img src="../img/Link.png" alt="링크">
+                        </a>
+                    </div>
+                    <img src="../profile/한수빈님 사진.png" alt="이미지" class="profile-img">
+                    <div class="profile-name-right">한수빈</div>
+                </div>
+            </div>
+            <div class="card left">
+                <div class="profile-contaniner">
+                    <img src="../profile/김도현 사진.jpeg" alt="이미지" class="profile-img">
+                    <div class="profile-name-left">김도현</div>
+                    <div class="icons-left">
+                        <a href="https://github.com/hot5667" target="_blank" alt="김도현git">
+                            <img src="../img/logo_github_icon.png" alt="GitHub">
+                        </a>
+                        <a href="https://velog.io/@hot5667/posts" target="_blank" alt="한수빈블로그">
+                            <img src="../img/Link.png" alt="링크">
+                        </a>
+                    </div>
+                </div>
+                <div class="bubble-left">
+                    <p class="Team-text">
+                        안녕하세요 24살 같지 않은 김도현입니다.🌱 <br>
+                        인생은 무한도전!🔥
+                    </p>
+                </div>
+            </div>
+            <!-- 슬라이드 -->
+            <div class="slideshow-container">
+                <div class="slideshow-subcontainer">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 5</div>
+                        <div class="text">
+                            <span class="name">
+                                김도현&#40;팀장&#41;
+                            </span>
+                            <br>
+                            <p>
+                                애니메이션, 음악, 영화, 게임을 좋아합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 5</div>
+                        <div class="text"><span class="name">
+                                김병엽&#40;팀원&#41;
+                            </span>
+                            <br>
+                            <p>
+                                영화, 게임과 팝송을 좋아합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 5</div>
+                        <div class="text"><span class="name">
+                                장성현&#40;팀원&#41;
+                            </span>
+                            <br>
+                            <p>
+                                스포츠 경기, 게임, 영화와 드라마를 좋아합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 5</div>
+                        <div class="text"><span class="name">
+                                조희진&#40;팀원&#41;
+                            </span>
+                            <br>
+                            <p>
+                                강아지, 아이돌 인피니트, 게임을 좋아합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 5</div>
+                        <div class="text"><span class="name">
+                                한수빈&#40;팀원&#41;
+                            </span>
+                            <br>
+                            <p>
+                                애니메이션, 음악과 스포츠를 좋아합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- '<'모양 버튼 -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <!-- '>'모양 버튼-->
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="toggle-button">
+            <span class="slider round"></span>
+        </label>
+        <p id="toggle-status"></p>
+
+        <!-- todolist -->
+        <div class="todolist">
+            <div>
+                <button id="listbtn" class="listbtn">
+                    <i class="fa-solid fa-list"></i>
+                </button>
+            </div>
+            <div id="box" class="box hide">
+                <!--  유레카 box, hide 동시할당 -->
+                <div class="top">
+                    <h1 class="title">To Do List</h1>
+                    <form id="form">
+                        <div class="submitbox">
+                            <input id="text" type="text" class="text" placeholder="할 일을 입력하세요" autocomplete="off" />
+                            <input id="date" type="date" class="date">
+                            <button type="submit" id="add" class="add">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div id="bottom" class="bottom"></div>
+                <template id="template">
+                    <div class="list">
+                        <div class="todo">
+                            <div class="content">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <div class="info">
+                                        <p class="text-date"></p>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="delete">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <script src="../src/side.js"></script>
+        <script src="../src/topBar.js"></script>
+        <script src="../src/main.js"></script>
+        <script src="../src/topbox.js"></script>
+        <script src="../src/carousel.js"></script>
+        <script src="../src/test.js"></script>
+        <script src="../src/music.js"></script>
+        <script src="../src/todolist1.js"></script>
+
+</body>
+
+</html>
