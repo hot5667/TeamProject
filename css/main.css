@@ -1,17 +1,16 @@
 :root {
-    --bg-color-light:#9bbbd4; 
+    --bg-color-light: #9bbbd4;
     --text-color-light: black;
-    --bg-color-dark: #2c2c2c;
+    --bg-color-dark: #0f0f0f;
     --text-color-dark: #fff;
 }
 
 body {
-    background-color: var( --bg-color-light);
+    background-color: var(--bg-color-light);
     color: var(--text-color-light);
     font-family: "Do Hyeon", sans-serif;
     font-style: normal;
-    height: 100vh;
-    margin: 0;
+    height: 90vh;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -21,9 +20,9 @@ body.dark-mode {
 }
 
 .Subcontainer {
-    transform: scale(0.7); 
+    transform: scale(0.7);
     transform-origin: top left;
-    margin-left: 30%;
+    margin-left: 40%;
     margin-bottom: -20%;
 }
 
@@ -38,13 +37,13 @@ body.dark-mode {
 
 .toggle-container {
     position: fixed;
-    bottom: 20px; 
-    right: 20px; 
+    bottom: 20px;
+    right: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 .switch {
@@ -106,7 +105,7 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-p { 
+p {
     display: inline-block;
     font-size: 15px;
     font-weight: bold;
@@ -117,39 +116,39 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    margin-top: 150px;
+    margin-top: 3%;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .card {
     display: flex;
     align-items: center;
     width: 60%;
-    margin-top: -45px;
-    margin-bottom: 50px;
+    margin-top: 3%;
+    margin-bottom: 3%;
     position: relative;
+    opacity: 1; 
+    transition: transform 0.5s ease, opacity 0.5s ease; 
 }
 
 .card.left {
     justify-content: flex-start;
     text-align: right;
     margin-right: 595px;
-    animation-duration: 3s;
-    animation-name: slidein;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
 .card.right {
     justify-content: flex-end;
     text-align: left;
     left: 590px;
-    animation-duration: 3s;
-    animation-name: slidein;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
-.profile-contaniner {
+.profile-container {
     position: relative;
 }
 
@@ -173,9 +172,9 @@ p {
 .Team-text {
     font-size: 25px;
     padding: 15px;
-    min-width: 70%; /* 최소 너비를 부모 너비의 70%로 설정 */
-    max-width: 150%; /* 최대 너비 설정 */
-    white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
+    min-width: 70%; 
+    max-width: 150%; 
+    white-space: nowrap; 
 }
 
 .p {
@@ -184,16 +183,17 @@ p {
     flex-grow: 1;
 }
 
-.icons-left{
+.icons-left {
     position: absolute;
-    right: 0;
+    left: 75%;
+    bottom: -5%;
     display: flex;
-    align-items: center; 
-    gap: 10px;
+    align-items: center;
+    gap: 10px
 }
 
 .icons-left a {
-    display: inline-block; 
+    display: inline-block;
     position: relative;
 }
 
@@ -204,6 +204,7 @@ p {
 
 .icons-right {
     position: absolute;
+    top: 93%;
     left: 0;
     display: flex;
     align-items: center;
@@ -211,7 +212,7 @@ p {
 }
 
 .icons-right a {
-    display: inline-block; 
+    display: inline-block;
     position: relative;
 }
 
@@ -220,52 +221,48 @@ p {
     height: 20px;
 }
 
-.profile-container {
-    position: relative;
-    text-align: center; 
-}
-
 .profile-name-left {
     position: absolute;
-    bottom: -10px; 
-    right: 101px; 
+    bottom: -10px;
+    right: 101px;
     border: 1px solid black;
     background-color: #fff;
     color: black;
     border-radius: 15px;
     font-size: 16px;
     font-weight: bold;
-    padding: 5px 10px; 
-    white-space: nowrap; 
+    padding: 5px 10px;
+    white-space: nowrap;
     display: inline-block;
-    transition: transfrom 0.2s ease-in-out;;
+    transition: transform 0.2s ease-in-out; 
 }
 
 .profile-name-right {
     position: absolute;
-    bottom: -10px; 
-    left: 101px; 
+    bottom: -10px;
+    left: 101px;
     border: 1px solid black;
     background-color: #fff;
-    color:black;
+    color: black;
     border-radius: 15px;
     font-size: 16px;
     font-weight: bold;
-    padding: 5px 10px; 
-    white-space: nowrap; 
+    padding: 5px 10px;
+    white-space: nowrap;
     display: inline-block;
-    transition: transfrom 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out; 
+    
 }
 
-.bubble-left, .bubble-right{
+.bubble-left, .bubble-right {
     position: relative;
     display: inline-block;
-    background-color: yellow; 
-    color: #000; 
-    padding: 10px 20px; 
-    border-radius: 20px; 
-    line-height: 1.5; 
-    max-width: 125%; 
+    background-color: yellow;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    line-height: 1.5;
+    max-width: 125%;
 }
 
 .bubble-left::before {
@@ -273,7 +270,7 @@ p {
     position: absolute;
     top: 50%;
     right: 100%;
-    margin-top: -10px; 
+    margin-top: -10px;
     border-width: 10px;
     border-style: solid;
     border-color: transparent yellow transparent transparent; /* 트라이앵글 */
@@ -284,18 +281,25 @@ p {
     position: absolute;
     top: 50%;
     left: 100%;
-    margin-top: -10px; 
+    margin-top: -10px;
     border-width: 10px;
     border-style: solid;
-    border-color: transparent transparent transparent yellow ; /* 트라이앵글 */
+    border-color: transparent transparent transparent yellow; /* 트라이앵글 */
 }
 
-@keyframes hidesplashscreen {
+/* 애니메이션 정의 */
+@keyframes slide-up {
     from {
-      opacity: 1;
+        transform: translateY(20px);
+        opacity: 0;
     }
     to {
-      opacity: 0;
-      visibility: hidden;
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
+}
+
+/* 클릭 시 애니메이션 효과 */
+.card.animate {
+    animation: slide-up 0.5s ease forwards;
+}

@@ -78,11 +78,14 @@ document.addEventListener("DOMContentLoaded", function () {
         text.classList.add('team-text');
         if (targetId === "KimDohyun-section") {
             text.innerHTML = `
-            <div class = "KimDohyun-text">
-                MBTI: ENTJ<br> 
-                취미: 운동, 코딩 영화: (역사적 배경을 담은) 국제시장, 남산의 부장들, 서울의 봄, 국가부도의 날, 1987<br> 
-                노래: (팝송) One Call Away(Charlie Puth), Off My  Face(Justin Bieber), Thinking out Loud(Ed Sheeran) Purpose(Etham)<br>
-                게임: (주로 여자친구랑) 오버워치, 크레이지 아케이드, 카트라이더'
+            <div class = "KimDohyun-Profile">
+                <div class = "KimDohyun-text">
+                    <h2>KimDohyun-Profile</h2>
+                    안녕하세요 FE개발자 지망생 김도현이라고 합니다.!<br>
+                    저는 이전에 게임 클라이언트 개발을 하면서 그래픽렌더링엔진 관련 해서 학습하였습니다.<br>
+                    현재는 FE에 전념하는 만큼 여러분들과 많은 프로젝트를 진행 하면서 친해지고 싶습니다. 잘부탁드립니다!
+                    
+                </div>
             </div>
             `;
         } else if (targetId === 'KimByungYeop-section') {
@@ -115,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
         } else if (targetId === "HanSuBin-section") {
             text.innerHTML = `
-            <div class = "ChoHeeJin-Profile">
+            <div class = "HanSuBin-Profile">
                 <div class = "HanSuBin-text">
                     <h1>ChoHeeJin Profile</h1>
                     <h2>엄마 나 <span class="dev" style="color = red;color: red;">개발자</span>가 될래요!!!</h2>

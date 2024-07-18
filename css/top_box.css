@@ -1,11 +1,12 @@
 
 /* 슬라이드 */
 .slideshow-container {
-    margin: 0;
     padding: 0;
     list-style: none;
     bottom: 250px;
     box-sizing: border-box;
+    margin-left: -12%;
+    margin-top: 15%;
 }
 
 .slideshow-subcontainer{
