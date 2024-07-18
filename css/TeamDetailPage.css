@@ -1,0 +1,13 @@
+.Team1 {
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    left: 150px;
+}
+
+.Team1 > img {
+    width: 224px;
+    height: 224px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
