@@ -1,9 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     const listbtn = document.getElementById('listbtn');
     const box = document.getElementById('box');
+    const badge = document.getElementById('badge');
+
+    let cloneCount = 0;
 
     listbtn.addEventListener('click', function() {
         box.classList.toggle('hide');
+        updateBageV();
     });
 
     const form = document.getElementById('form');
@@ -12,13 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const bottom = document.getElementById('bottom');
     const template = document.getElementById('template');
 
-    let cloneCount = 0;
-
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
         const textValue = text.value.trim();
         const dateValue = date.value;
+        updateBage();
 
         if (dateValue !== "" && textValue !== "" && cloneCount < 4) {
             const clone = template.content.cloneNode(true);
@@ -39,12 +42,27 @@ document.addEventListener("DOMContentLoaded", function () {
             deletebtn.addEventListener("click", function () {
                 deletebtn.parentNode.parentNode.remove();
                 cloneCount--;
+                updateBage();
             });
 
             bottom.appendChild(clone);
             cloneCount++;
             text.value = "";
             date.value = "";
+            updateBage();
         }
     });
+
+    function updateBage() {
+        badge.textContent = cloneCount;
+        updateBageV();
+    }
+    function updateBageV() {
+        if(cloneCount ===0) {
+            badge.style.display = 'none';
+        } else {
+            badge.style.display = 'flex';
+        }
+    }
+    updateBageV();
 });
