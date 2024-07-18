@@ -7,7 +7,7 @@
 
 .todolist {
     position: fixed;
-    top: 10px;
+    top: 0px;
     right: 0px;
 }
 
@@ -28,7 +28,6 @@
     border-radius: 50%;
     border: 1px solid white;
   
-    cursor: pointer;
     transition: background-color 0.3s ease;
   }
 
@@ -117,14 +116,6 @@
 .top > form .add:hover {
     transform: scale(1.1);
     cursor: pointer;
-}
-
-.box > .bottom {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .box > .list {
