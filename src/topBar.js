@@ -2,14 +2,12 @@ const success = async (position) => {
     const lat = position.coords.latitude
     const lon = position.coords.longitude
 
-    const left_Content = document.getElementById("weather_Left_Item")
-    const right_Content = document.getElementById("weather_Right_Item")
+    const right_Content = document.getElementById("right_Item")
     const loader = document.getElementById("loader")
 
     try {
         await Promise.all[get_WeatherInfo(lat, lon), get_CityInfo(lat, lon)]
         loader.style.display = 'none'
-        left_Content.style.display = 'flex'
         right_Content.style.display = 'flex'
     } catch (error) {
         throw console.error(error)
@@ -61,7 +59,6 @@ const get_WeatherInfo = async (lat, lon) => {
 const get_CityInfo = async (lat, lon) => {
     try {
         const API_KEY = `e107faacb45d44439da01cdb9db39e53`
-
         const url = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lon}&key=${API_KEY}`
 
         const response = await fetch(url)
@@ -79,7 +76,7 @@ const get_CityInfo = async (lat, lon) => {
     }
 }
 
-// navigator.geolocation.getCurrentPosition(success, fail)
+navigator.geolocation.getCurrentPosition(success, fail)
 
 document.getElementById('logo').addEventListener('click', () => {
     location.reload();

@@ -23,14 +23,15 @@
             <div class="left_Item">
                 <img id="logo" src="../img/logo(pink).png">
             </div>
-
-            <div class="right_Item">
-                <div class="weather_Left_Item", id="weather_Left_Item">
-                    <img id="weather_Icon">
-                </div>
-                <div class="weather_Right_Item", id="weather_Right_Item">
-                    <text id="city"></text>
-                    <text id="temp"></text>
+            <div class="right_Item_Container">
+                <div class="right_Item" id="right_Item">
+                    <div class="weather_Left_Item" , id="weather_Left_Item">
+                        <img id="weather_Icon">
+                    </div>
+                    <div class="weather_Right_Item" , id="weather_Right_Item">
+                        <text id="city"></text>
+                        <text id="temp"></text>
+                    </div>
                 </div>
                 <div class="loader" id="loader"></div>
             </div>
@@ -165,6 +166,7 @@
         <p id="toggle-status"></p>
     </div>
 
+<<<<<<< Updated upstream
     <!-- todolist -->
     <div class="todolist">
         <div>
@@ -210,6 +212,57 @@
     <script src="/src/topBar.js"></script>
     <script src="/src/main.js"></script>
     <script type="module" src="/src/todolist.js"></script>
+=======
+        <!-- todolist -->
+        <div class="todolist">
+            <div>
+                <button id="listbtn" class="listbtn">
+                    <i class="fa-solid fa-list"></i>
+                </button>
+            </div>
+            <div id="box" class="box hide"> <!--  유레카 box, hide 동시할당 -->
+                <div class="top">
+                    <h1 class="title">To Do List</h1>
+                    <form id="form">
+                        <div>
+                            <input id="date" type="date" class="date">
+                            <input id="text" type="text" class="text" placeholder="할 일을 입력하세요" autocomplete="off" />
+                            <button type="submit" id="add" class="add">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div id="bottom" class="bottom"></div>
+                <template id="template">
+                    <div class="list">
+                        <div class="todo">
+                            <div class="content">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <div class="info">
+                                        <p class="text-date"></p>
+                                    </div>
+                                </label>
+                            </div>
+                            <button class="delete">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <script src="../src/side.js"></script>
+        <script src="../src/topBar.js"></script>
+        <script src="../src/main.js"></script>
+        <script src="../src/topbox.js"></script>
+        <script src="../src/carousel.js"></script>
+        <script src="../src/test.js"></script>
+        <script type="module" src="../src/todolist.js"></script>
+>>>>>>> Stashed changes
 
 </body>
 
