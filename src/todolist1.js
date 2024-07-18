@@ -19,6 +19,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const listbtn = document.getElementById('listbtn');
     const box = document.getElementById('box');
+    const badge = document.getElementById('badge');
+
 
     listbtn.addEventListener('click', function() {
         box.classList.toggle('hide');
@@ -57,12 +59,29 @@ document.addEventListener("DOMContentLoaded", function () {
             deletebtn.addEventListener("click", function () {
                 deletebtn.parentNode.parentNode.remove();
                 cloneCount--;
+                updateBadge();
             });
 
             bottom.appendChild(clone);
             cloneCount++;
             text.value = "";
             date.value = "";
+            updateBadge();
         }
     });
+
+    function updateBadge() {
+        badge.textContent = cloneCount;
+        updateBadgeValue();
+    }
+
+    function updateBadgeValue() {
+        if(cloneCount === 0) {
+            badge.style.display = 'none';
+        } else {
+            badge.style.display = 'block';
+        }
+    }
+    
+    updateBadgeValue();
 });
