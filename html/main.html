@@ -10,10 +10,10 @@
     <script src="https://kit.fontawesome.com/3a115195d8.js" crossorigin="anonymous"></script>
     <title>TeamShowcase</title>
 
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/topBar.css">
-    <link rel="stylesheet" href="/css/todolist.css">
-    <link rel="stylesheet" href="/css/Sidebar.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/topBar.css">
+    <link rel="stylesheet" href="../css/todolist.css">
+    <link rel="stylesheet" href="../css/Sidebar.css">
 </head>
 
 <body>
@@ -39,35 +39,40 @@
 
     <!-- sidebar -->
     <div class="sidebar">
-        <a href="#" class="sidebar-item-home" id="first-item">
-          <i class="fa-solid fa-house"></i>
-          <span>Home</span>
-        </a>
-        <a href="#" class="sidebar-item">
+        <a href="#KimDohyun" class="sidebar-item">
           <i class="fa-solid fa-user"></i>
           <p><span>김도현</span></p>
         </a>
-        <a href="#" class="sidebar-item">
+        <a href="#KimByungYeop" class="sidebar-item">
           <i class="fa-solid fa-user"></i>
           <p><span>김병엽</span></p>
         </a>
-        <a href="#" class="sidebar-item">
+        <a href="#ChoHeeJin" class="sidebar-item">
           <i class="fa-solid fa-user"></i>
           <p><span>조희진</span></p>
         </a>
-        <a href="#" class="sidebar-item">
+        <a href="#HanSuBin" class="sidebar-item">
           <i class="fa-solid fa-user"></i>
           <p><span>한수빈</span></p>
         </a>
-        <a href="#" class="sidebar-item">
+        <a href="#JanSungHyun" class="sidebar-item">
           <i class="fa-solid fa-user"></i>
           <p><span>장성현</span></p>
       </a>
     </div>
 
+    <div class="content">
+        <div id="KimDohyun-section" class="section">김도현 페이지</div>
+        <div id="KimByungYeop-section" class="section">김병엽 페이지</div>
+        <div id="ChoHeeJin-section" class="section">조희진 페이지</div>
+        <div id="HanSuBin-section" class="section">한수빈 페이지</div>
+        <div id="JanSungHyun-section" class="section">장성현 페이지</div>
+    </div>
+
     <!-- main -->
     <div class="container">
-        <div class="card left">
+        <div class = 'Subcontainer' id = 'Subcontainer'>
+            <div class="card left">
             <div class  = "profile-contaniner">
                 <img src="../profile/김병엽님 사진.jpeg" alt="이미지" class="profile-img">
                 <div class="profile-name-left">김병엽</div>
@@ -151,6 +156,7 @@
             </div>
         </div>
     </div>
+</div>
     <div class="toggle-container">
         <label class="switch">
             <input type="checkbox" id="toggle-button">

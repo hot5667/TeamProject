@@ -243,3 +243,37 @@
     text-decoration: line-through solid black;
     text-decoration-thickness: 2px;
 }
+
+/* 달력 */
+input[type=date] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    font-size: 100%;
+    border: none;
+
+    padding-right: 1px;
+}
+input[type=date]:focus {
+    outline: none;
+}
+input[type=date]::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+}
+input[type=date]::-webkit-datetime-edit-text {
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-datetime-edit-month-field{
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-datetime-edit-day-field {
+    -webkit-appearance: none;
+    display: none;
+}
+input[type=date]::-webkit-datetime-edit-year-field {
+    -webkit-appearance: none;
+    display: none;
+}
+
