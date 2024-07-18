@@ -184,10 +184,15 @@ p {
 
 .icons-right {
     position: absolute;
-    display: flex;
     left: 0;
+    display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.icons-right a {
+    display: inline-block; 
+    position: relative;
 }
 
 .icons-right img {
@@ -241,7 +246,7 @@ p {
     background-color: rgb(255, 255, 0);
 }
 
-.bubble {
+.bubble-left, .bubble-right{
     position: relative;
     display: inline-block;
     background-color: yellow; 
@@ -252,7 +257,7 @@ p {
     max-width: 70%; 
 }
 
-.bubble::before {
+.bubble-left::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -261,4 +266,15 @@ p {
     border-width: 10px;
     border-style: solid;
     border-color: transparent yellow transparent transparent; /* 트라이앵글 */
+}
+
+.bubble-right::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -10px; 
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent yellow ; /* 트라이앵글 */
 }

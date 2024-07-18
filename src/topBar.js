@@ -21,7 +21,7 @@ const fail = () => {
     console.log("위치정보 액세스 불가!")
 }
 
-const get_Date= () => {
+const get_Date = () => {
 const today = new Date();
 
 const year = today.getFullYear();
@@ -80,3 +80,7 @@ try {
 }
 
 navigator.geolocation.getCurrentPosition(success, fail)
+
+document.getElementById('logo').addEventListener('click', () => {
+    location.reload();
+})
