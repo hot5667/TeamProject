@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 
 .music-container {
+  transform: scale(0.7); 
+  transform-origin: top left; 
+
   box-sizing: border-box;
 
   font-family: "Rubik", sans-serif;
@@ -9,13 +12,12 @@
   justify-content: center;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0 3px 10px 0 rgba(186, 184, 184, 0.6);
   display: flex;
   padding: 20px 30px;
   margin: 100px 0;
   z-index: 1200;
   position: fixed;
-  top: 65.9%;
+  top: 73.1%;
 }
 
 h1{
@@ -25,7 +27,7 @@ h1{
 .music-subcontainer {
   background-color: #fff;
   border-radius: 15px;
-  box-shadow: 0 3px 10px 0 rgba(186, 184, 184, 0.6);
+  box-shadow: 0 5px 15px 0 rgba(186, 184, 184, 0.6);
   display: flex;
   padding: 20px 30px;
   position: relative;

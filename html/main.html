@@ -22,24 +22,27 @@
 
 <body>
     <!-- header -->
-    <div class="header">
-        <nav class="nav">
-            <div class="left_Item">
-                <img id="logo" src="../img/logo(pink).png">
-            </div>
+    <header>
+        <div class="header">
+            <nav class="nav">
+                <div class="left_Item">
+                    <img id="logo" src="../img/logo(pink).png">
+                </div>
 
-            <div class="right_Item">
-                <div class="weather_Left_Item" , id="weather_Left_Item">
-                    <img id="weather_Icon">
-                </div>
-                <div class="weather_Right_Item" , id="weather_Right_Item">
-                    <text id="city"></text>
-                    <text id="temp"></text>
-                </div>
-                <div class="loader" id="loader"></div>
-            </div>
-        </nav>
-    </div>
+                <div class="right_Item_Container">
+                    <div class="right_Item" id="right_Item">
+                        <div class="weather_Left_Item" , id="weather_Left_Item">
+                            <img id="weather_Icon">
+                        </div>
+                        <div class="weather_Right_Item" , id="weather_Right_Item">
+                            <text id="city"></text>
+                            <text id="temp"></text>
+                        </div>
+                        <div class="loader" id="loader"></div>
+                    </div>
+            </nav>
+        </div>
+    </header>
 
     <!-- sidebar -->
     <div class="sidebar">
@@ -59,7 +62,7 @@
             <i class="fa-solid fa-user"></i>
             <p><span>한수빈</span></p>
         </a>
-        <a href="#JanSungHyun" class="sidebar-item">
+        <a href="#ZhangSeongHyun" class="sidebar-item">
             <i class="fa-solid fa-user"></i>
             <p><span>장성현</span></p>
         </a>
@@ -70,7 +73,7 @@
         <div id="KimByungYeop-section" class="section">김병엽 페이지</div>
         <div id="ChoHeeJin-section" class="section">조회진 페이지</div>
         <div id="HanSuBin-section" class="section">한수빈 페이지</div>
-        <div id="JanSungHyun-section" class="section">장성현 페에지</div>
+        <div id="ZhangSeongHyun-section" class="section">장성현 페에지</div>
     </div>
 
 
@@ -217,7 +220,6 @@
             <div class="slideshow-container">
                 <div class="slideshow-subcontainer">
                     <div class="mySlides fade">
-                        <div class="numbertext">1 / 5</div>
                         <div class="text">
                             <span class="name">
                                 김도현&#40;팀장&#41;
@@ -230,7 +232,7 @@
                     </div>
 
                     <div class="mySlides fade">
-                        <div class="numbertext">2 / 5</div>
+
                         <div class="text"><span class="name">
                                 김병엽&#40;팀원&#41;
                             </span>
@@ -242,7 +244,7 @@
                     </div>
 
                     <div class="mySlides fade">
-                        <div class="numbertext">3 / 5</div>
+
                         <div class="text"><span class="name">
                                 장성현&#40;팀원&#41;
                             </span>
@@ -254,7 +256,7 @@
                     </div>
 
                     <div class="mySlides fade">
-                        <div class="numbertext">4 / 5</div>
+
                         <div class="text"><span class="name">
                                 조희진&#40;팀원&#41;
                             </span>
@@ -266,7 +268,7 @@
                     </div>
 
                     <div class="mySlides fade">
-                        <div class="numbertext">5 / 5</div>
+
                         <div class="text"><span class="name">
                                 한수빈&#40;팀원&#41;
                             </span>
@@ -302,10 +304,11 @@
 
         <!-- todolist -->
         <div class="todolist">
-            <div>
+            <div class="icon">
                 <button id="listbtn" class="listbtn">
                     <i class="fa-solid fa-list"></i>
                 </button>
+                <div class="badge" id="badge"></div>
             </div>
             <div id="box" class="box hide">
                 <!--  유레카 box, hide 동시할당 -->
@@ -341,14 +344,12 @@
             </div>
         </div>
 
-        <script src="../src/side.js"></script>
-        <script src="../src/topBar.js"></script>
-        <script src="../src/main.js"></script>
-        <script src="../src/topbox.js"></script>
-        <script src="../src/carousel.js"></script>
-        <script src="../src/test.js"></script>
-        <script src="../src/music.js"></script>
-        <script src="../src/todolist.js"></script>
+        <script src = "../src/music.js"></script>
+        <script src = "../src/topBar.js"></script>
+        <script src = "../src/main.js"></script>
+        <script src = "../src/topbox.js"></script>
+        <script src = "../src/side.js"></script>
+        <script type="module" src="../src/todolist.js"></script>
 
 </body>
 

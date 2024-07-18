@@ -1,8 +1,8 @@
 .Team1 {
     display: flex;
     align-items: flex-start;
-    position: absolute;
-    left: 150px;
+    position:relative;
+    transform: translate(-110%, 0%);
 }
 
 .Team1 > img {
@@ -18,3 +18,166 @@
     color: #333;
 }
   
+.KimByungYeop-Profile {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transform: translate(65%, -10%);
+}
+
+.KimByungYeop-text {
+    transform: translate(45%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.6;
+    transform: scale(1.6);
+    transform-origin: top left;
+}
+
+.KimByungYeop-text h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.KimByungYeop-text p {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.KimByungYeop-text .mbti {
+    font-weight: bold;
+    color: #ff7f50;
+}
+
+.KimByungYeop-text .hobby {
+    font-weight: bold;
+    color: #1e90ff;
+}
+
+.KimByungYeop-text .movies {
+    font-style: italic;
+}
+
+.KimByungYeop-text .songs {
+    font-style: italic;
+}
+
+.KKimByungYeop-text .games {
+    font-style: italic;
+}
+
+.ChoHeeJin-Profile {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transform: translate(65%, -10%);
+}
+
+.ChoHeeJin{
+    transform: translate(110%, 0%)
+}
+
+.ChoHeeJin-text h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.ChoHeeJin-text {
+    transform: translate(30%, -30%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 720px;
+    text-align: center;
+    line-height: 1.6;
+    transform: scale(1.6);
+    transform-origin: top left
+}
+
+.ChoHeeJin-text p {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.ChoHeeJin-Profile {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.HanSuBin-text {
+    transform: translate(24%, -17%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 850px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.HanSuBin-text p {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.HanSuBin-text h1{
+    color: #333;    
+    margin-bottom: 10px;
+}
+
+.HanSuBin-text h2{
+    color: #333;   
+    font-style: italic; 
+}
+
+.ZhangSeongHyun-Profile {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.ZhangSeongHyun-text {
+    transform: translate(24%, -30%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 850px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.ZhangSeongHyun-text p {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.ZhangSeongHyun-text h2{
+    color: #333;   
+    font-style: italic; 
+}
+

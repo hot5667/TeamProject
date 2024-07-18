@@ -17,6 +17,7 @@
   height: 395px;
   box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.479);
   position: fixed;
+  z-index: 1000;
 }
 
 .sidebar-item, .sidebar-item-home {

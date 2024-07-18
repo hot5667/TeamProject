@@ -70,15 +70,7 @@
     font-size: 35px;
 }
 
-/* 숫자 텍스트 (1/3 etc) */
-.numbertext {
-    color: black;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-    font-weight: bold;
-}
+
 
 /* 동그라미 버튼 */
 .dot {

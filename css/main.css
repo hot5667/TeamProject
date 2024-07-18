@@ -20,10 +20,17 @@ body.dark-mode {
     color: var(--text-color-dark);
 }
 
+.Subcontainer {
+    transform: scale(0.7); 
+    transform-origin: top left;
+    margin-left: 30%;
+    margin-bottom: -20%;
+}
+
 .topbar {
     background-color: green;
-    width: 100%;
-    height: 50px;
+    width: 90%;
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,15 +76,15 @@ body.dark-mode {
     content: "";
     height: 26px;
     width: 26px;
-    left: 4px;
-    bottom: 4px;
+    left: 0px;
+    bottom: 0px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: lightgreen;
 }
 
 input:focus + .slider {
@@ -92,6 +99,7 @@ input:checked + .slider:before {
 
 .slider.round {
     border-radius: 34px;
+    border: 4px solid silver;
 }
 
 .slider.round:before {
@@ -108,8 +116,8 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
-    margin-top: 120px;
+    gap: 50px;
+    margin-top: 150px;
 }
 
 .card {
@@ -125,12 +133,20 @@ p {
     justify-content: flex-start;
     text-align: right;
     margin-right: 595px;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .card.right {
     justify-content: flex-end;
     text-align: left;
     left: 590px;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .profile-contaniner {
@@ -218,16 +234,11 @@ p {
     color: black;
     border-radius: 15px;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: bold;
     padding: 5px 10px; 
     white-space: nowrap; 
     display: inline-block;
     transition: transfrom 0.2s ease-in-out;;
-}
-
-.profile-name-left:hover {
-    background-color: rgb(255, 255, 0);
-
 }
 
 .profile-name-right {
@@ -239,15 +250,11 @@ p {
     color:black;
     border-radius: 15px;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: bold;
     padding: 5px 10px; 
     white-space: nowrap; 
     display: inline-block;
     transition: transfrom 0.2s ease-in-out;
-}
-
-.profile-name-right:hover {
-    background-color: rgb(255, 255, 0);
 }
 
 .bubble-left, .bubble-right{
@@ -282,3 +289,13 @@ p {
     border-style: solid;
     border-color: transparent transparent transparent yellow ; /* 트라이앵글 */
 }
+
+@keyframes hidesplashscreen {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }

@@ -7,19 +7,20 @@
 
 .todolist {
     position: fixed;
-    top: 0px;
-    right: 0px;
+    top: 150px;
+    right: 70px;
 }
 
 .listbtn {
-    background-color: #95A3B1;
+    background-color: black;
     width: 50px;
     height: 50px;
     color: white;
+    right: 0px;
+
 
     position: absolute;
-    top:127px;
-    right:55px;
+
 
     font-size: 25px;
 
@@ -41,6 +42,21 @@
     cursor: pointer;
   }
 
+  .icon {
+    position: relative;
+  }
+  .badge {
+    position: absolute;
+    background-color: #E94D3D;
+    width: 20px;
+    border-radius: 13px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    top: -7px;
+    right: -5px;
+  }
+
 .box {
     background-color: white;
     width: 300px;
@@ -49,9 +65,10 @@
     box-sizing: border-box;
     padding: 20px 15px;
 
-    position: absolute;
-    top: 190px;
-    right: 50px;
+    position: relative;
+    top: 60px;
+
+
     
     border: 2px solid white;
     border-radius: 20px;
@@ -73,7 +90,7 @@
 
 .top > form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     
@@ -85,18 +102,21 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
     gap: 3px;
 }
 
 .top > form .text {
     background-color: rgb(235, 235, 235);
     height: 28px;
-    width: 160px;
+    width: 130px;
     font-size: 16px;
 
     border: none;
     border-radius: 15px;
-    padding-left: 20px;
+
+    position: relative;
+    bottom: 0px;    
 }
 
 .top > form .add {
@@ -251,15 +271,13 @@
   }
   
 .hide {
-    display: none;
+    visibility: hidden;
 }
 
 .strikethrough {
     text-decoration: line-through;
     opacity: 0.5; /* 줄 긋기 시 투명도 조정 */
 }
-
-
 
 /* 달력 */
 input[type=date] {
