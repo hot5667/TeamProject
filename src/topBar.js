@@ -35,9 +35,9 @@ document.getElementById("date").innerHTML = dateString
 
 const get_WeatherInfo = async (lat, lon) => {
 try {
-    const API_KEY = `2bac9dc8e520f9a4d739b8fdfb3526af`;
+    // const API_KEY = `2bac9dc8e520f9a4d739b8fdfb3526af`;
 
-    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=kr`;
+    // const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=kr`;
     const response = await fetch(url);
 
     if (!response.ok) {
@@ -62,7 +62,7 @@ const get_CityInfo = async (lat, lon) => {
 try {
     const API_KEY = `e107faacb45d44439da01cdb9db39e53`
 
-    const url = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lon}&key=${API_KEY}`
+    // const url = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lon}&key=${API_KEY}`
 
     const response = await fetch(url)
     const data = await response.json()

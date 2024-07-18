@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
 * {
   font-family: "Do Hyeon", sans-serif;
   font-style: normal;
 }
+
 
 .sidebar {
   width: 76px;
@@ -9,16 +12,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
+  border-radius: 15px;
+  margin-top: 20%;
+  height: 395px;
+  box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.479);
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  margin-top: 100px;
 }
 
-.sidebar-item,
-.sidebar-item-home {
+.sidebar-item, .sidebar-item-home {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,10 +39,6 @@
   color: #333;
 }
 
-#first-item {
-  margin-bottom: 100px;
-}
-
 .sidebar-item:hover {
   transform: scale(1.1);
 }
@@ -57,8 +54,7 @@ p {
   margin-bottom: 0px;
 }
 
-.fa-user,
-.fa-house {
+.fa-user, .fa-house {
   color: black;
   margin-top: 2px;
 }

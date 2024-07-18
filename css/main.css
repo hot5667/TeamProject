@@ -116,18 +116,21 @@ p {
     display: flex;
     align-items: center;
     width: 60%;
-    margin: 0 auto;
+    margin-top: -45px;
+    margin-bottom: 50px;
     position: relative;
 }
 
 .card.left {
     justify-content: flex-start;
     text-align: right;
+    margin-right: 595px;
 }
 
 .card.right {
     justify-content: flex-end;
     text-align: left;
+    left: 590px;
 }
 
 .profile-contaniner {
@@ -154,13 +157,14 @@ p {
 .Team-text {
     font-size: 25px;
     padding: 15px;
+    min-width: 70%; /* 최소 너비를 부모 너비의 70%로 설정 */
+    max-width: 150%; /* 최대 너비 설정 */
+    white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
 }
 
 .p {
     margin: 0;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     flex-grow: 1;
 }
 
@@ -254,7 +258,7 @@ p {
     padding: 10px 20px; 
     border-radius: 20px; 
     line-height: 1.5; 
-    max-width: 70%; 
+    max-width: 125%; 
 }
 
 .bubble-left::before {
