@@ -43,10 +43,6 @@
   transform: scale(1.1);
 }
 
-.sidebar-item-home:hover {
-  transform: scale(1.1);
-}
-
 p {
   color: #000;
   text-align: center;
