@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
             text.innerHTML = `
             <div class = "HanSuBin-Profile">
                 <div class = "HanSuBin-text">
-                    <h1>ChoHeeJin Profile</h1>
+                    <h1>HanSuBin Profile</h1>
                     <h2>엄마 나 <span class="dev" style="color = red;color: red;">개발자</span>가 될래요!!!</h2>
                     <p>
                         안녕하세요 개린이 한수빈입니다.<br>

@@ -8,6 +8,8 @@
 :root {
     --listbtn-color-lights: black;
     --listbtn-color-darks: #1a3b8ed7;
+    --badge-color-lights: #E94D3D;
+    --badge-color-darks: #F39C12;
 }
 
 .todolist {
@@ -17,45 +19,38 @@
 }
 
 .listbtn {
-    background-color:  var(--listbtn-color-lights);
+    background-color: var(--listbtn-color-lights);
     width: 50px;
     height: 50px;
     color: white;
-    right: 0px;
-
-
-    position: absolute;
-
-
     font-size: 25px;
-
     box-sizing: border-box;
     border: none;
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-  
     cursor: pointer;
     transition: background-color 0.3s ease;
-
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
-  }
+}
 
- .listbtn:hover {
+.listbtn:hover {
     background-color: rgb(200, 200, 200);
     cursor: pointer;
-  }
-  .listbtn.dark-mode {
-    background-color:  var(--listbtn-color-darks);
-  }
+}
 
-  .icon {
+.listbtn.dark-mode {
+    background-color: var(--listbtn-color-darks);
+}
+
+.icon {
     position: relative;
-  }
-  .badge {
+}
+
+.badge {
     position: absolute;
-    background-color: #E94D3D;
+    background-color: var(--badge-color-lights);
     width: 20px;
     border-radius: 13px;
     color: white;
@@ -63,21 +58,29 @@
     text-align: center;
     top: -7px;
     right: -5px;
-  }
+}
+
+/* 다크 모드 스타일 */
+body.dark-mode .listbtn {
+    background-color: var(--listbtn-color-darks);
+}
+
+body.dark-mode .listbtn:hover {
+    background-color: rgb(100, 100, 100); /* 다크 모드에서 호버 색상 */
+}
+
+body.dark-mode .badge {
+    background-color: var(--badge-color-darks);
+}
 
 .box {
     background-color: white;
     width: 300px;
-    height:fit-content;
-
+    height: fit-content;
     box-sizing: border-box;
     padding: 20px 15px;
-
     position: relative;
     top: 60px;
-
-
-    
     border: 2px solid white;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -101,7 +104,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
     gap: 10px;
 }
 
@@ -110,7 +112,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     gap: 3px;
 }
 
@@ -119,31 +120,25 @@
     height: 28px;
     width: 130px;
     font-size: 16px;
-
     border: none;
     border-radius: 15px;
-
     position: relative;
-    bottom: 0px;    
+    bottom: 0px;
 }
 
 .top > form .add {
     background-color: rgb(200, 200, 200);
     color: white;
-
     width: 30px;
     height: 30px;
     font-size: 15px;
-
     box-sizing: border-box;
     border: none;
     border-radius: 50%;
-  
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 10px;
-
     cursor: pointer;
 }
 
@@ -160,7 +155,6 @@
     align-items: center;
 }
 
-
 .box > .list {
     display: flex;
     flex-direction: column;
@@ -172,17 +166,14 @@
     background-color: white;
     width: 270px;
     height: 38px;
-
     box-sizing: border-box;
     padding: 0px 20px;
     border-radius: 30px;
     border: 2px solid rgba(215, 215, 215, 0.5);
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     gap: 5px;
     margin-bottom: 13px;
 }
@@ -249,7 +240,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
     gap: 10px;
 }
 
@@ -257,27 +247,23 @@
     background-color: #30363dd2;
     color: white;
     font-size: 10px;
-
     height: 18px;
     width: 18px;
-
     border: none;
     border-radius: 50%;
-
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-  
     cursor: pointer;
     transition: opacity 0.1s ease;
-  }
+}
 
- .delete:hover {
+.delete:hover {
     opacity: 0.8;
     cursor: pointer;
-  }
-  
+}
+
 .hide {
     visibility: hidden;
 }
@@ -294,27 +280,32 @@ input[type=date] {
     height: 20px;
     font-size: 100%;
     border: none;
-
     padding-right: 1px;
 }
+
 input[type=date]:focus {
     outline: none;
 }
-input[type=date]::-webkit-calendar-picker-indicator{
+
+input[type=date]::-webkit-calendar-picker-indicator {
     cursor: pointer;
 }
+
 input[type=date]::-webkit-datetime-edit-text {
     -webkit-appearance: none;
     display: none;
 }
-input[type=date]::-webkit-datetime-edit-month-field{
+
+input[type=date]::-webkit-datetime-edit-month-field {
     -webkit-appearance: none;
     display: none;
 }
+
 input[type=date]::-webkit-datetime-edit-day-field {
     -webkit-appearance: none;
     display: none;
 }
+
 input[type=date]::-webkit-datetime-edit-year-field {
     -webkit-appearance: none;
     display: none;

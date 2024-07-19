@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
-
-* {
-    font-family: "Do Hyeon", sans-serif;
-    font-style: normal;
-}
-
 .header-container {
     top: 0;
     left: 0;
     position: fixed;
-    background-color: #9bbbd4; 
+    background-color: #82a5bf; 
     width: 100%;
     height: 100px;
     border-bottom: 0.1px dashed gray;
     z-index: 1002;
+}
+
+
+body.dark-mode .header-container {
+    background-color: #1e1e1e; 
+    border-bottom: 0.1px dashed #333; 
 }
 
 .nav {
@@ -21,7 +20,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 0 50px 0 20px;
     height: 100%;
 }
@@ -29,13 +27,12 @@
 .left_Item {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .left_Item img {
     width: 180px;
     height: 80%;
-
     cursor: pointer;
 }
 
@@ -43,7 +40,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     height: 70%;
 }
 
@@ -51,13 +47,11 @@
     display: none;
     flex-direction: row;
     justify-content: center;
-    align-items: center;  
-
+    align-items: center;
     background: rgba(255,255,255,0.4);
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.2);
     backdrop-filter: blur(5px);
-    
     height: 100%;
     padding: 0 10px 0 0;
 }
@@ -65,7 +59,6 @@
 .weather_Left_Item {
     width: 70px;
     height: 80%;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,7 +93,6 @@
     border-top-color: transparent;
     animation: spin 3s linear infinite;
 }
-
 
 @keyframes spin {
     to { transform: rotate(360deg); }

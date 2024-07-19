@@ -5,6 +5,19 @@
   font-style: normal;
 }
 
+:root {
+  --sidebar-bg-light: black;
+  --sidebar-bg-dark: #1a3b8ed7;
+  --sidebar-item-color-light: white;
+  --sidebar-item-color-dark: white;
+  --sidebar-border-light: #ffffff83;
+  --sidebar-border-dark: #444;
+  --sidebar-item-hover-light: #333;
+  --sidebar-item-hover-dark: #555;
+  --sidebar-item-home-color-light: #333;
+  --sidebar-item-home-color-dark: #ddd;
+  --sidebar-item-clicked-color: #f3f4de;
+}
 
 .sidebar {
   width: 76px;
@@ -15,10 +28,16 @@
   border-radius: 15px;
   margin-top: 15%;
   height: 395px;
+  padding: 15px 0;
   box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.479);
   position: fixed;
   z-index: 1000;
 }
+
+.content {
+  color: transparent;
+}
+
 .sidebar > .profilepg {
     border-bottom: 2px solid #ffffff83;
 }
@@ -61,4 +80,30 @@ p {
 
 .sidebar-item.clicked i {
   color: #f3f4de;
+}
+
+/* 다크 모드 스타일 */
+body.dark-mode .sidebar {
+  background-color: var(--sidebar-bg-dark);
+  box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .sidebar > .profilepg {
+  border-bottom: 2px solid var(--sidebar-border-dark);
+}
+
+body.dark-mode .sidebar-item span {
+  color: var(--sidebar-item-color-dark);
+}
+
+body.dark-mode .sidebar-item-home span {
+  color: var(--sidebar-item-home-color-dark);
+}
+
+body.dark-mode .sidebar-item:hover {
+  color: var(--sidebar-item-hover-dark);
+}
+
+body.dark-mode .fa-user, body.dark-mode .fa-house {
+  color: var(--sidebar-item-color-dark);
 }

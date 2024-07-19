@@ -13,7 +13,7 @@
     <link rel="icon" href="../img/logo(pink).png">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/topBar.css">
-    <link rel="stylesheet" href="../css/todolist1.css">
+    <link rel="stylesheet" href="../css/todolist.css">
     <link rel="stylesheet" href="../css/Sidebar.css">
     <link rel="stylesheet" href="../css/TeamDetailPage.css">
     <link rel="stylesheet" href="../css/top_box.css">
@@ -39,7 +39,8 @@
                             <text id="city"></text>
                             <text id="temp"></text>
                         </div>
-                        <div class="loader" id="loader"></div>
+                        <div class="loader" id="loader">
+                        </div>
                     </div>
             </nav>
         </div>
@@ -51,22 +52,30 @@
     </div>
     <!-- sidebar -->
     <div class="sidebar">
-        <a href="#KimDohyun" class="sidebar-item">
-            <i class="fa-solid fa-user"></i>
-            <p><span>김도현</span></p>
-        </a>
-        <a href="#KimByungYeop" class="sidebar-item">
-            <i class="fa-solid fa-user"></i>
-            <p><span>김병엽</span></p>
-        </a>
-        <a href="#ChoHeeJin" class="sidebar-item">
-            <i class="fa-solid fa-user"></i>
-            <p><span>조희진</span></p>
-        </a>
-        <a href="#HanSuBin" class="sidebar-item">
-            <i class="fa-solid fa-user"></i>
-            <p><span>한수빈</span></p>
-        </a>
+        <div class="profilepg">
+            <a href="#KimDohyun" class="sidebar-item">
+                <i class="fa-solid fa-user"></i>
+                <p><span>김도현</span></p>
+            </a>
+        </div>
+        <div class="profilepg">
+            <a href="#KimByungYeop" class="sidebar-item">
+                <i class="fa-solid fa-user"></i>
+                <p><span>김병엽</span></p>
+            </a>
+        </div>
+        <div class="profilepg">
+            <a href="#ChoHeeJin" class="sidebar-item">
+                <i class="fa-solid fa-user"></i>
+                <p><span>조희진</span></p>
+            </a>
+        </div>
+        <div class="profilepg">
+            <a href="#HanSuBin" class="sidebar-item">
+                <i class="fa-solid fa-user"></i>
+                <p><span>한수빈</span></p>
+            </a>
+        </div>
         <a href="#ZhangSeongHyun" class="sidebar-item">
             <i class="fa-solid fa-user"></i>
             <p><span>장성현</span></p>
@@ -311,7 +320,7 @@
 
         <!-- todolist -->
         <div class="todolist">
-            <div class="icon" id="icon">
+            <div class="icon">
                 <button id="listbtn" class="listbtn">
                     <i class="fa-solid fa-list"></i>
                 </button>
@@ -351,14 +360,14 @@
             </div>
         </div>
 
-        <script src="../src/music.js"></script>        
+        <script src="../src/music.js"></script>
         <script src="../src/topBar.js"></script>
-        <script src="../src/main1.js"></script>
+        <script src="../src/main.js"></script>
         <script src="../src/topbox.js"></script>
         <script src="../src/side.js"></script>
         <script src="../src/animation.js"></script>
         <script src="../src/icon.js"></script>
-        <script type="module" src="../src/todolist1.js"></script>
+        <script type="module" src="../src/todolist.js"></script>
 
 </body>
 
