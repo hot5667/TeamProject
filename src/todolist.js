@@ -55,12 +55,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 const deletebtn = clone.querySelector('.delete');
-                deletebtn.dataset.todoId = docId; // Corrected data attribute name
+                deletebtn.dataset.todoId = docId;
 
                 deletebtn.addEventListener("click", async function () {
-                    const todoId = deletebtn.dataset.todoId; // Corrected data attribute name
+                    const todoId = deletebtn.dataset.todoId;
                     try {
-                        await deleteDoc(doc(db, todoId)); // Correctly delete the document
+                        await deleteDoc(doc(db, "ToDo", todoId));
                         console.log("Document successfully deleted!");
                         deletebtn.parentNode.parentNode.remove();
                         cloneCount--;
@@ -109,12 +109,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 const deletebtn = clone.querySelector('.delete');
-                deletebtn.dataset.todoId = docRef.id; // Corrected data attribute name
+                deletebtn.dataset.todoId = docRef.id;
 
                 deletebtn.addEventListener("click", async function () {
-                    const todoId = deletebtn.dataset.todoId; // Corrected data attribute name
+                    const todoId = deletebtn.dataset.todoId;
                     try {
-                        await deleteDoc(doc(db, todoId)); // Correctly delete the document
+                        await deleteDoc(doc(db, "ToDo", todoId));
                         console.log("Document successfully deleted!");
                         deletebtn.parentNode.parentNode.remove();
                         cloneCount--;
@@ -147,5 +147,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     updateBadgeValue();
-    fetchTasks(); // Fetch and display tasks on page load
+    fetchTasks(); 
 });

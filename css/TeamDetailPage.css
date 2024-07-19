@@ -3,7 +3,7 @@
     display: flex;
     align-items: flex-start;
     position:relative;
-    transform: translate(-110%, 0%);
+    transform: translate(-110%, 10%);
 }
 
 .Team1 > img {
@@ -20,7 +20,7 @@
 }
 /* 김도현영역 */
 .KimDohyun {
-    transform: translate(110%, 0%)
+    transform: translate(0%, 0%)
 }
 
 .KimDohyun-Profile {
@@ -30,7 +30,7 @@
     align-items: center;
     height: 100vh;
     margin: 0;
-    transform: translate(75%, -20%);
+    transform: translate(45%, -10%);
 }
 
 .KimDohyun-text {
@@ -60,7 +60,7 @@
     align-items: center;
     height: 100vh;
     margin: 0;
-    transform: translate(46%, 0%);
+    transform: translate(45%, -5%);
 }
 
 .KimByungYeop-text {

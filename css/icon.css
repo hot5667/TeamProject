@@ -1,0 +1,53 @@
+/* styles.css */
+body {
+    margin: 0;
+    overflow: hidden; 
+    transition: overflow 0.5s ease; 
+}
+
+.icon-container {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: yellow;
+    transition: background-color 0.5s ease;
+    z-index: 9999; 
+    pointer-events: auto; 
+}
+
+.icon-container.transition {
+    animation: fadeOut 1.5s ease-in-out forwards;
+    pointer-events: none; 
+}
+
+.icon-subcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#transition-icon {
+    font-size: 150px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#transition-icon:hover {
+    transform: scale(1.2);
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+body.transition-active {
+    animation: none !important;
+}

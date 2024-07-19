@@ -3,13 +3,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentIndex = 0;
     let allCardsVisible = false;
 
+    const audio = new Audio('/sound/카톡.mp3')
+    audio.volume = 0.3;
+
     function showNextCard() {
         if (cards.length === 0 || allCardsVisible) return;
 
         cards[currentIndex].classList.add('animate');
 
         currentIndex++;
-
+        audio.play();
         if (currentIndex >= cards.length) {
             allCardsVisible = true;
             document.body.removeEventListener('click', showNextCard); 

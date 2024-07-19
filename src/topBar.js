@@ -1,24 +1,23 @@
 const success = async (position) => {
-    const lat = position.coords.latitude;
-    const lon = position.coords.longitude;
+    const lat = position.coords.latitude
+    const lon = position.coords.longitude
 
-    const right_Content = document.getElementById("right_Item");
-    const loader = document.getElementById("loader");
+    const right_Content = document.getElementById("right_Item")
+    const loader = document.getElementById("loader")
 
     try {
-        await Promise.all([get_WeatherInfo(lat, lon), get_CityInfo(lat, lon)]);
-        loader.style.display = 'none';
-        right_Content.style.display = 'flex';
+        await Promise.all[get_WeatherInfo(lat, lon), get_CityInfo(lat, lon)]
+        loader.style.display = 'none'
+        right_Content.style.display = 'flex'
     } catch (error) {
-        console.error(error);
+        throw console.error(error)
     }
-};
+}
 
 const fail = () => {
-    const loader = document.getElementById("loader");
-    loader.style.display = 'none';
-    console.log("위치정보 액세스 불가!");
-};
+    loader.style.display = 'none'
+    console.log("위치정보 액세스 불가!")
+}
 
 const get_Date = () => {
     const today = new Date();
@@ -29,8 +28,8 @@ const get_Date = () => {
 
     const dateString = year + '년 ' + month + '월 ' + day + '일';
 
-    document.getElementById("date").innerHTML = dateString;
-};
+    document.getElementById("date").innerHTML = dateString
+}
 
 const get_WeatherInfo = async (lat, lon) => {
     try {
@@ -44,43 +43,41 @@ const get_WeatherInfo = async (lat, lon) => {
         }
         const data = await response.json();
 
-        const temp = data.current.temp;
-        const humidity = data.current.humidity;
-        const iconURL = `https://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png`;
+        const temp = data.current.temp
+        const humidity = data.current.humidity
+        const iconURL = `https://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png`
 
-        const imgElement = document.getElementById("weather_Icon");
-        imgElement.src = iconURL;
+        const imgElement = document.getElementById("weather_Icon")
+        imgElement.src = iconURL
 
-        document.getElementById("temp").innerHTML = temp + '°C';
+        document.getElementById("temp").innerHTML = temp + '°C'
     } catch (error) {
-        console.error(`Fetch error: ${error}`);
-        throw error; 
+        throw console.error(`Fetch error: ${error}`);
     }
-};
+}
 
 const get_CityInfo = async (lat, lon) => {
     try {
-        const API_KEY = `e107faacb45d44439da01cdb9db39e53`;
-        const url = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lon}&key=${API_KEY}`;
+        const API_KEY = `e107faacb45d44439da01cdb9db39e53`
+        const url = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lon}&key=${API_KEY}`
 
-        const response = await fetch(url);
-        const data = await response.json();
+        const response = await fetch(url)
+        const data = await response.json()
 
         if (!data.results[0]) {
-            throw new Error(`Geocoding error: ${response.status}`);
+            throw new Error(`Geocoding error: ${response.status}`)
         }
 
-        const city = data.results[0].components.city;
+        const city = data.results[0].components.city
 
-        document.getElementById("city").innerHTML = city;
+        document.getElementById("city").innerHTML = city
     } catch (error) {
-        console.error(`Geocoding error: ${error}`);
-        throw error; 
+        throw console.error(`Geocoding error: ${error}`);
     }
-};
+}
 
-navigator.geolocation.getCurrentPosition(success, fail);
+navigator.geolocation.getCurrentPosition(success, fail)
 
 document.getElementById('logo').addEventListener('click', () => {
     location.reload();
-});
+})
