@@ -5,6 +5,10 @@
   font-style: normal;
 }
 
+.content {
+  color: transparent;
+}
+
 
 .sidebar {
   width: 76px;
